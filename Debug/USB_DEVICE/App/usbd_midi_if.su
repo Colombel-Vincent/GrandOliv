@@ -1,0 +1,2 @@
+usbd_midi_if.c:30:17:MIDI_DataRx	24	static
+usbd_midi_if.c:187:17:MIDI_DataTx	24	static
