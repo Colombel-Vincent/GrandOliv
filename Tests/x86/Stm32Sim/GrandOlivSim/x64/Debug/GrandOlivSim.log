@@ -1,0 +1,24 @@
+﻿  EventManager.cpp
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16): error C2259: 'EventManager' : impossible d'instancier une classe abstraite
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\EventManager.hpp(17): message : voir la déclaration de 'EventManager'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16): message : à cause des membres suivants :
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16): message : 'void eventSubscriber::Notify(void)' : est abstrait
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\observers_types.hpp(34): message : voir la déclaration de 'eventSubscriber::Notify'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16): message : 'void eventSubscriber::Attach(IObserver *)' : est abstrait
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\observers_types.hpp(35): message : voir la déclaration de 'eventSubscriber::Attach'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16): message : 'void eventSubscriber::Detach(IObserver *)' : est abstrait
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\observers_types.hpp(36): message : voir la déclaration de 'eventSubscriber::Detach'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16,35): error C2259: 'EventManager' : impossible d'instancier une classe abstraite
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\EventManager.hpp(17): message : voir la déclaration de 'EventManager'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16,35): message : à cause des membres suivants :
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16,35): message : 'void eventSubscriber::Notify(void)' : est abstrait
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\observers_types.hpp(34): message : voir la déclaration de 'eventSubscriber::Notify'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16,35): message : 'void eventSubscriber::Attach(IObserver *)' : est abstrait
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\observers_types.hpp(35): message : voir la déclaration de 'eventSubscriber::Attach'
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Src\EventManager.cpp(16,35): message : 'void eventSubscriber::Detach(IObserver *)' : est abstrait
+C:\Users\colom\STM32CubeIDE\workspace_1.7.0\GrandOliv\Core\Inc\observers_types.hpp(36): message : voir la déclaration de 'eventSubscriber::Detach'
+  Button.cpp
+  MidiFixture.cpp
+  types_grandoliv3.cpp
+  GrandOlivSim.cpp
+  Génération de code en cours...
