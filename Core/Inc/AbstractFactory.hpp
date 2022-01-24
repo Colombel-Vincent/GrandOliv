@@ -7,6 +7,8 @@
 
 #ifndef ABSTRACTFACTORY_HPP_
 #define ABSTRACTFACTORY_HPP_
+
+
 #include <map>
 
 
@@ -46,7 +48,7 @@ public:
 
     ~Factory()
     {
-        std::map<Key, Creator<T>*>::iterator it = ConstructorMap.begin();
+    	typename std::map<Key, Creator<T>*>::iterator it = ConstructorMap.begin();
         
         while (it != ConstructorMap.end())
         {
@@ -57,7 +59,6 @@ public:
 private:
     std::map<Key, Creator<T>*> ConstructorMap;
 };
-
 
 
 #endif /* ABSTRACTFACTORY_HPP_ */
