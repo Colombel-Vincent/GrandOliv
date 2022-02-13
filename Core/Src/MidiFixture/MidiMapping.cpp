@@ -6,7 +6,7 @@
  */
 
 
-#include "MidiFixture/MidiMapping.hpp"
+#include "../../Inc/MidiFixture//MidiMapping.hpp"
 
 void createAllButton(std::vector<MidiFixture*> *  MdiList)
 {

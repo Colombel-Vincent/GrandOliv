@@ -11,8 +11,9 @@
 #include "ComManager.hpp"
 class ComUART : public ComTx
 {
-	virtual int Update(user::update_type_event evt, void* ptr) {};
-	virtual void SendMsg();
+public:
+	virtual int Update(user::update_type_event evt, void* ptr) { return 1; };
+	virtual void SendMsg() {};
 };
 
 

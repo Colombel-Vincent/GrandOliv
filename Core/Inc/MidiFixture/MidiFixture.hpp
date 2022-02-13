@@ -13,7 +13,7 @@
 #include "../../Src/types_grandoliv3.cpp"
 
 
- class MidiFixture : public MidiFixtureEventClass
+ class MidiFixture : public IObserver
 {
 public :
 	/*setter */

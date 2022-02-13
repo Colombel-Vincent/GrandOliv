@@ -36,7 +36,7 @@ protected:
                 MidiFixtureIndex[i][g] = DEFAULT_VALUE_INDEX;
 
         _ComMidi =NULL;
-        _ComUART =NULL;
+        _ComUart =NULL;
         _ComI2C =NULL;
 
     };

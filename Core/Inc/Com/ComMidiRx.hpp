@@ -13,7 +13,7 @@
 
 class ComMidiRx : public ComRx
 {
-	 virtual int Notify(user::update_type_event evt, void* ptr) {};
+	virtual int Notify(user::update_type_event evt, void* ptr) { return 1; };
 };
 
 

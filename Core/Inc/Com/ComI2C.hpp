@@ -11,8 +11,9 @@
 #include "ComManager.hpp"
 class ComI2C : public  ComTx
 {
-	virtual int Update(user::update_type_event evt, void* ptr) {};
-	virtual void SendMsg();
+public :
+	 int Update(user::update_type_event evt, void* ptr) { return 1; };
+	 void SendMsg() {};
 };
 
 

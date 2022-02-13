@@ -6,6 +6,13 @@
     <ClCompile Include="..\..\..\..\Core\Src\types_grandoliv3.cpp" />
     <ClCompile Include="GrandOlivSim.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiFixtureImpl.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComI2C.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComManager.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComMidiRx.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComMidiTx.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComUART.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Builder.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiMapping.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Core\Inc\AbstractFactory.hpp" />
@@ -22,6 +29,12 @@
     <ClInclude Include="..\..\..\..\Core\Inc\types_grandoliv3.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixtureImpl.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixture.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiMapping.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComI2C.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComMidiRx.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComMidiTx.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComUART.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Builder.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="NewFilter1">

@@ -24,7 +24,7 @@ class ComTx : IObserver
 {
 public :
 	virtual int Update(user::update_type_event evt, void* ptr) =0;
-	virtual void SendMsg();
+	virtual void SendMsg() {};
 };
 
 

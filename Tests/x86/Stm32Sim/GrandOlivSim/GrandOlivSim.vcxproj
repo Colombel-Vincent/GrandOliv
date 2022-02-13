@@ -115,7 +115,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SIMULATION;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SIMULATION;</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -140,25 +140,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Core\Src\Builder.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComI2C.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComManager.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComMidiRx.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComMidiTx.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\Com\ComUART.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\EventManager.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\Button.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiFixtureImpl.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiMapping.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\types_grandoliv3.cpp" />
     <ClCompile Include="GrandOlivSim.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Core\Inc\AbstractFactory.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Builder.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\Com\ComArduino.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComI2C.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\Com\ComLedDriver.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\Com\ComManager.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComMidiRx.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComMidiTx.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\Com\ComRxMidi.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\Com\ComTxMidi.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComUART.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\EventManager.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Button.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Encoder.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Fader.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixture.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixtureImpl.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiMapping.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\observers_types.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\types_grandoliv3.hpp" />
   </ItemGroup>

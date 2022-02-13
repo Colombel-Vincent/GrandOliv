@@ -6,8 +6,13 @@
  */
 
 
-#include <Com/ComMidiTx.hpp>
+#include "../../Inc/Com/ComMidiTx.hpp"
+#include <malloc.h>
+#include <string.h>
 
+#if SIMULATION
+ void sendMidiMessage(uint8_t* ptr, long size) {};
+#endif
 
  ComMidiTx::ComMidiTx()
 {
@@ -51,12 +56,15 @@ int ComMidiTx::SendAllMidiData()
 	SendMsg();
 	return 0;
 }
+
 void ComMidiTx::SendMsg()
 {
 	//semaphore
 	uint8_t * tempBuffer = (uint8_t *)malloc(sizeof(uint8_t)*_msgCount*4);
-	memcpy(tempBuffer,_bufferTx,sizeof(uint8_t)*_msgCount*4);
-	sendMidiMessage(tempBuffer,sizeof(tempBuffer));
+//	memcpy(tempBuffer,_bufferTx,sizeof(uint8_t)*_msgCount*4);
+
+	//sendMidiMessage(tempBuffer,sizeof(tempBuffer));
+
 	_msgCount = 0;
 	//semaphore
 }

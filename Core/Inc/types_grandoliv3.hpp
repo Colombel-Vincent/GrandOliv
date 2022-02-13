@@ -72,10 +72,10 @@ namespace user
 		com_midiTx,
 		com_midiRx,
 		com_I2C,
-		com_uart
+		com_UART
 
 
-	}midi_fixture_types;
+	}Com_types;
 
 };
 

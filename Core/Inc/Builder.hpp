@@ -10,6 +10,10 @@
 
 #include "AbstractFactory.hpp"
 #include "MidiFixture/Button.hpp"
+#include "Com/ComMidiTx.hpp"
+#include "Com/ComMidiRx.hpp"
+#include "Com/ComUART.hpp"
+#include "Com/ComI2C.hpp"
 
 class Builder
 {
@@ -31,8 +35,8 @@ public :
 protected :
 	static Builder* m_builder;
 	Factory<MidiFixtureImpl, user::Midi_fixture_types> m_midiFixtureBuilder;
-	Factory<MidiFixtureImpl, user::Com_types> m_comBuilder;
-	Factory<MidiFixtureImpl, user::Com_types> m_comRxBuilder;
+	Factory<ComTx, user::Com_types> m_comBuilder;
+	Factory<ComRx, user::Com_types> m_comRxBuilder;
 
 };
 

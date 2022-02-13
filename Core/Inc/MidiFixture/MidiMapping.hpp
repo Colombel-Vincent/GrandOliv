@@ -7,7 +7,7 @@
 
 #ifndef INC_MIDIFIXTURE_MIDIMAPPING_HPP_
 #define INC_MIDIFIXTURE_MIDIMAPPING_HPP_
-#include "Builder.hpp"
+#include "../Builder.hpp"
 
 #define NB_GREEN_LED 75
 #define NB_RED_LED 169

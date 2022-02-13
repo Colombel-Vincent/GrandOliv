@@ -24,7 +24,7 @@ EventManager * EventManager::_eventManager =NULL;
 	 switch (evt)
 	 {
 	 case user::update_type_event::MidiMsgTx:
-		 ComSubscriberList.at(user::com::MidiTx)->Update(evt, ptr);
+		 _ComMidi->Update(evt, ptr);
 	 case  user::update_type_event::NewNote:
 		 return UpdateAllFixtureList(); // Update all the list to sort in croissant order
 	 case  user::update_type_event::NewChannel:
@@ -37,20 +37,6 @@ EventManager * EventManager::_eventManager =NULL;
 	 return 0;
  }
 
- void EventManager::ExecuteTx()
- {
-	 while (!bufferTxMidi.empty())
-	 {
-		 void* msg = bufferTxMidi.front();
-		 bufferTxMidi.pop_back();
-	 }
- }
-
- void EventManager::midiMsgManager(MidiMsg* msg)
- {
-
-
- }
 
  int EventManager::UpdateAllFixtureList()
  {
@@ -118,15 +104,15 @@ EventManager * EventManager::_eventManager =NULL;
 	 case user::attach_type_event::ComI2C:
 		 if(_ComI2C==NULL)
 			 return 1;
-		 _ComI2C = ptr;
+		 _ComI2C = (ComTx*)ptr;
 	 case user::attach_type_event::ComUART:
 		 if(_ComUart==NULL)
 			 return 1;
-		 _ComUart = ptr;
+		 _ComUart = (ComTx*)ptr;
 	 case user::attach_type_event::ComMidi:
 		 if(_ComMidi==NULL)
 			 return 1;
-		 _ComMidi = ptr;
+		 _ComMidi = (ComTx*)ptr;
 	 }
 
 	 return 0;
