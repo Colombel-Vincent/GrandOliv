@@ -8,30 +8,42 @@
 #ifndef INC_MIDIFIXTURE_BUTTON_HPP_
 #define INC_MIDIFIXTURE_BUTTON_HPP_
 
-#include "MidiFixture.hpp"
+#include "MidiFixtureImpl.hpp"
+
 #include <iostream>
+#include "../../Inc/EventManager.hpp"
 
-
-
-
-class Button : public MidiFixture
+class Button : public MidiFixtureImpl
 {
+public : 
 
+	Button();
 protected:
 	uint8_t counterAdress;
 	uint8_t muxAdress;
 
+	inline virtual int Update(user::update_type_event evt, void* ptr) {return MidiFixtureImpl::Update(evt, ptr);}
 public:
 };
 
 class ButtonRedLed :  public Button
 {
 public : 
+	ButtonRedLed();
+	void Notify() {};
 	/*Update Red Led State*/
-	int Update(void * ptr) override;
+	virtual int  Update(user::update_type_event evt, void* ptr);
 	
+	inline uint8_t GetRedLedColumn(){return _redLedColumn;};
+	inline uint8_t GetRedLedRow(){return _redLedRow;};
+	inline uint8_t GetRedledState(){return _redLed;};
+
+
+	bool SetRedLedColumn(uint8_t value);
+	bool SetRedLedRow(uint8_t value);
+
 protected:
-	LedState _redLed;
+	user::LedState _redLed;
 	uint8_t _redLedColumn;
 	uint8_t _redLedRow;
 
@@ -42,9 +54,19 @@ class ButtonGreenLed : public ButtonRedLed
 {
 
 public :
-	int Update(void* ptr) override;
+	ButtonGreenLed();
+	void Notify() {};
+	virtual int  Update(user::update_type_event evt, void* ptr) ;
+
+	inline uint8_t GetGreenLedColumn(){return _greenLedColumn;};
+	inline uint8_t GetGreenLedRow(){return _greenLedRow;};
+	inline uint8_t GetGreenledState(){return _greenLed;};
+
+	bool SetGreenLedColumn(uint8_t value);
+	bool SetGreenLedRow(uint8_t value);
+
 protected :
-	LedState _greenLed ;
+	user::LedState _greenLed ;
 	uint8_t _greenLedColumn;
 	uint8_t _greenLedRow ;
 
@@ -54,9 +76,10 @@ protected :
 class ButtonNoLed :  public Button
 {
 public : 
-	void ClassNotAbstract() {
-		counterAdress = 5;
-	};
+	ButtonNoLed();
+	void Notify() {};
+	inline virtual int Update(user::update_type_event evt, void* ptr) { return Button::Update(evt, ptr); };
+	
 
 protected : 
 	uint8_t id;
