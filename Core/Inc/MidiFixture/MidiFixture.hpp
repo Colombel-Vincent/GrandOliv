@@ -10,31 +10,50 @@
 
 #include <stdint.h>
 #include "../observers_types.hpp"
+#include "../../Src/types_grandoliv3.cpp"
 
 
  class MidiFixture : public MidiFixtureEventClass
 {
 public :
-	int SetChannel(uint8_t p_value) ;
-	int SetNote(uint8_t p_value) ;
+	/*setter */
+	virtual int SetChannel(uint8_t p_value) { return 0; };
+	virtual int SetNote(uint8_t p_value) { return 0; };
 
-	inline uint8_t GetNote(){return _value;};
-	inline uint8_t GetChannel(){return _channel;};
+	/*Getter*/
+	virtual uint8_t GetId() { return 0; };
+	virtual uint8_t GetNote() { return 0; };
+	virtual uint8_t GetChannel() { return 0; };
 
-	int Update(void* ptr) ;
+	/*This method should notify eventManager*/
+	virtual uint8_t SetValue(uint8_t value) {return 0;}
 
-	virtual void Attach(IObserver* observer) {};
-	virtual void Detach(IObserver* observer) {};
-	virtual void Notify();
+	virtual void SendMsgMidi() {  };
 
+	virtual int Update(user::update_type_event evt, void* ptr) { return 0; };
+	/*operator*/
+	 friend  bool operator<(MidiFixture a,MidiFixture b) ;
+	 friend  bool operator>(MidiFixture a, MidiFixture b) ;
+	
 protected :
+	 uint8_t _id =1; // MidiFixture ID
 	 uint8_t _value ; // midi value [0 ... 127]
-	 uint8_t _note; // midi note [0 ... 127]
-	 uint8_t _channel; // midi Channel [0 ... 16]
-	 MidiNoteEvent _event; //midi event
+	 uint8_t _note = 1; // midi note [0 ... 127]
+	 uint8_t _channel= 1 ; // midi Channel [0 ... 16]
+	 user::MidiNoteEvent _event; //midi event
 	 bool _sent; // to specify if the MidiFicture as been sent
 };
 
+
+inline  bool operator <(MidiFixture a,MidiFixture b)
+ {
+	 return  (a.GetNote() * a.GetNote()) < (b.GetNote() * b.GetChannel());
+ };
+
+inline  bool operator >(MidiFixture a, MidiFixture b)
+{
+	return  (a.GetNote() * a.GetNote()) > (b.GetNote() * b.GetChannel());
+};
 
 
 
