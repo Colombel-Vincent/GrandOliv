@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Core\Src\EventManager.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\Button.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\types_grandoliv3.cpp" />
+    <ClCompile Include="GrandOlivSim.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiFixtureImpl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Core\Inc\AbstractFactory.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComArduino.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComLedDriver.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComManager.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComRxMidi.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\Com\ComTxMidi.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\EventManager.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Button.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Encoder.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Fader.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\observers_types.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\types_grandoliv3.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixtureImpl.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixture.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="NewFilter1">
+      <UniqueIdentifier>{d6649d99-6a52-45b9-8d62-68a98d2b579c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

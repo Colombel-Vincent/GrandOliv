@@ -142,7 +142,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Core\Src\EventManager.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\Button.cpp" />
-    <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiFixture.cpp" />
+    <ClCompile Include="..\..\..\..\Core\Src\MidiFixture\MidiFixtureImpl.cpp" />
     <ClCompile Include="..\..\..\..\Core\Src\types_grandoliv3.cpp" />
     <ClCompile Include="GrandOlivSim.cpp" />
   </ItemGroup>
@@ -158,6 +158,7 @@
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Encoder.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\Fader.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixture.hpp" />
+    <ClInclude Include="..\..\..\..\Core\Inc\MidiFixture\MidiFixtureImpl.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\observers_types.hpp" />
     <ClInclude Include="..\..\..\..\Core\Inc\types_grandoliv3.hpp" />
   </ItemGroup>
