@@ -11,17 +11,20 @@
 
 #include "../observers_types.hpp"
 
-class ComManagerRx
+
+
+class ComRx
 {
 public :
-	void Notify() = 0;
+	 virtual int Notify(user::update_type_event evt, void* ptr) = 0;
 };
 
 
-class ComManagerTx
+class ComTx : IObserver
 {
 public :
-	void Update() = 0;
+	virtual int Update(user::update_type_event evt, void* ptr) =0;
+	virtual void SendMsg();
 };
 
 
